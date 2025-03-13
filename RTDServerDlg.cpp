@@ -92,7 +92,7 @@ LPARAM CRTDServerDlg::OnAccept(WPARAM wParam, LPARAM lParam) {
 		m_socCom[tmp]->Init(this->m_hWnd);
 
 		char message[50];
-		sprintf_s(message, "%d%d", SOC_CLIENT_CONNECT, number);
+		sprintf_s(message, "%d %d", SOC_CLIENT_CONNECT, number);
 		m_socCom[tmp]->Send(message, 256);
 		user++;
 	}
